@@ -1,0 +1,30 @@
+{
+  "name": "rube",
+  "version": "0.1.0",
+  "description": "Voice CLI with OpenAI Realtime API, Agent API, and Rube MCP integration",
+  "module": "index.ts",
+  "type": "module",
+  "bin": {
+    "voice-cli": "./src/cli/voice-cli.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/cli/voice-cli.ts",
+    "dev:interactive": "bun run src/cli/voice-cli.ts -i",
+    "build": "tsc",
+    "start": "node dist/src/cli/voice-cli.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "@types/socket.io": "^3.0.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "openai": "^6.9.1",
+    "socket.io": "^4.8.1"
+  }
+}
